@@ -28,7 +28,13 @@ def res_cuadr ():
 sol1_cuad = lambda a,b,c: ((-b + ((b**2 - 4*a*c)**0.5)) / (2*a)) if a != 0 else None
 
 sol2_cuad = lambda a,b,c: ((-b - ((b**2 - 4*a*c)**0.5)) / (2*a)) if a != 0 else None
-    
+
+def cadena_a_mayus():
+    cadena=input("Ingrese una cadena de texto: ")
+    cadena = cadena.upper()
+    print(cadena)
+ 
+cad_may_lambda = lambda cadena: cadena.upper()
 
 def mostrar_menu():
     print("1. Convierte cadena a Mayusculas (lambda)")
@@ -43,9 +49,14 @@ while True:
     mostrar_menu()
     opcion=input("Selecciona una opcion: ")
     
+    if opcion=="1":
+        cadena=input("Ingrese la cadena: ")
+        cadenasalida=cad_may_lambda(cadena)
+        print(cadenasalida)
     
-        
-        
+    elif opcion=="2":
+        cadena_a_mayus()
+           
     elif opcion=="3":
         numero = input("Ingrese el numero del que desea calcular el cubo: ")
         resultado = cube(int (numero))
