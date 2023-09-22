@@ -43,18 +43,8 @@ while True:
     mostrar_menu()
     opcion=input("Selecciona una opcion: ")
     
-    if opcion=="1":
-        res_cuadr();
+    
         
-    elif opcion=="2":
-        a=input("Ingrese el coeficiente de x^2: ")
-        b=input("Ingrese el coeficiente de x: ")
-        c=input("Ingrese el termino independiente: ")
-        raiz1 = sol1_cuad(int(a),int(b),int(c))
-        raiz2 = sol2_cuad(int(a),int(b),int(c))
-        
-        print("Las soluciones para "+a+"x^2+"+b+"x+"+c+" son: ")
-        print(str(raiz1)+" y "+str(raiz2))
         
     elif opcion=="3":
         numero = input("Ingrese el numero del que desea calcular el cubo: ")
@@ -66,6 +56,19 @@ while True:
     elif opcion=="4":
         cubo()
         
+    elif opcion=="5":
+        res_cuadr();
+        
+    elif opcion=="6":
+        a=input("Ingrese el coeficiente de x^2: ")
+        b=input("Ingrese el coeficiente de x: ")
+        c=input("Ingrese el termino independiente: ")
+        raiz1 = sol1_cuad(int(a),int(b),int(c))
+        raiz2 = sol2_cuad(int(a),int(b),int(c))
+        
+        print("Las soluciones para "+a+"x^2+"+b+"x+"+c+" son: ")
+        print(str(raiz1)+" y "+str(raiz2))
+    
     elif opcion=="7":
         print("Saliendo del programa")
         break
